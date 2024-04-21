@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document Replica</title>
+  <style>
+    body {
+      background-color: #f5f5dc;
+      /* Background color to match the outer part of the image */
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .outer-border {
+      background-color: #fffff0;
+      /* Inner part color */
+      width: 768px;
+      /* Width to match the image */
+      height: 874px;
+      /* Height to match the image */
+      border: 5px solid black;
+      padding: 10px;
+    }
+
+    .inner-border {
+      border-top: 5px solid black;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header {
+      height: 50px;
+      /* Adjust the height as needed to match the header in the image */
+      border-bottom: 5px solid black;
+      display: flex;
+      /* This will hold the squares in the header */
+    }
+
+    .square {
+      width: 50px;
+      /* Adjust the width as needed to match the squares in the image */
+      height: 100%;
+      background-color: black;
+      border-left: 5px solid #fffff0;
+      /* Same color as the inner background for spacing */
+    }
+
+    .content {
+      flex-grow: 1;
+      /* Takes up the remaining space */
+    }
+  </style>
+</head>
+
+<body>
+  <div class="outer-border">
+    <div class="inner-border">
+      <div class="header">
+        <!-- Repeat the square div as many times as needed to match the header of the image -->
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <!-- ... -->
+      </div>
+      <div class="content">
+        <!-- Main content goes here -->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

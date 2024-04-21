@@ -35,17 +35,20 @@ body {
 .sidebar {
   height: 100%;
   width: 0;
-  /* initial width of the sidebar */
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: var(--selection_background);
   overflow-x: hidden;
   transition: 0.5s;
-  /* smooth transition */
   padding-top: 60px;
   color: white;
+}
+
+.sidebar.open {
+  width: 10%;
+  /* Sidebar takes up 20% of the viewport width */
 }
 
 .sidebar ul {
@@ -53,13 +56,25 @@ body {
   padding: 0;
 }
 
-.sidebar ul li {
-  padding: 8px 8px 8px 32px;
+.sidebar ul li button {
+  padding: 8px;
+  width: 100%;
+  color: white;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
 }
 
 #main {
   transition: margin-left .5s;
   padding: 16px;
+  width: 100%;
+}
+
+#main.shifted {
+  margin-left: 10%;
+  /* Shift main content by the width of the sidebar */
 }
 
 #main button {

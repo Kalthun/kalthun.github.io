@@ -1,0 +1,36 @@
+:root {
+  --page-top-bg: #d18787;
+  --page-mid-bg: #b27f7f;
+  --page-bot-bg: #705656;
+
+  --text-color: #cec7bbb9;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-top {
+  flex: 1;
+  background-color: var(--page-top-bg);
+}
+
+.page-mid {
+  flex: 4;
+  background-color: var(--page-mid-bg);
+}
+
+.page-bot {
+  flex: 1;
+  background-color: var(--page-bot-bg);
+}
+
+.page-top, .page-mid, .page-bot {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
